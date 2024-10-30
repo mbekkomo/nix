@@ -33,6 +33,11 @@ in
     nixfmt-rfc-style
     shellcheck
     moar
+    glow
+    fzf
+    ripgrep
+    fd
+    sd
   ];
 
   home.file = {
@@ -164,6 +169,15 @@ in
 
   programs.gh = {
     enable = true;
+    extensions = with pkgs; [
+      gh-poi
+      gh-eco
+      gh-screensaver
+      gh-s
+      gh-f
+      gh-notify
+      gh-markdown-preview
+    ];
     settings.aliases = {
       rcl = "repo clone";
       rfk = "repo fork";
@@ -171,4 +185,14 @@ in
       rdl = "repo delete --yes";
     };
   };
+
+  services.git-sync = {
+    enable = true;
+    repositories."dotfiles" = {
+      path = "${homeDir}/dotfiles";
+      uri = "https://github.com/mbekkomo/dotfiles.git";
+    };
+  };
+
+  services.arrpc.enable = true;
 }
