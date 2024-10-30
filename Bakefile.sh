@@ -10,5 +10,5 @@ task.switch() {
 }
 
 task.fmt() {
-  nix run nixpkgs#fd -- -e nix -x run nixpkgs#nixfmt-rfc-style
+  nix run nixpkgs#fd -- -e nix -X nix run nixpkgs#nixfmt-rfc-style {}
 }
