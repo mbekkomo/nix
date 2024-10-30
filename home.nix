@@ -110,7 +110,7 @@ in
       source ~/.local/share/lscolors.fish
     '';
     plugins = with pkgs.fishPlugins; [
-      async-prompt
+      (async-prompt // { __ignore })
       done
       colored-man-pages
       fifc
