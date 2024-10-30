@@ -107,6 +107,7 @@ in
     interactiveShellInit = ''
       starship init fish | source
       source ~/.local/share/lscolors.fish
+      source ~
     '';
   };
 
