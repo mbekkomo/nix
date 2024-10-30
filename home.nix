@@ -113,21 +113,22 @@ in
       fifc \
         --preview 'fish -c \"_fifc_action preview {} {q}\"'
     '';
-    plugins = 
-    let
-      plugin = x: {
-        name = x.name;
-        src = x.src;
-      };
-    in
-    with pkgs.fishPlugins; [
-      (plugin done)
-      (plugin colored-man-pages)
-      (plugin fifc)
-      (plugin autopair)
-      (plugin git-abbr)
-      (plugin fzf-fish)
-    ];
+    plugins =
+      let
+        plugin = x: {
+          name = x.name;
+          src = x.src;
+        };
+      in
+      with pkgs.fishPlugins;
+      [
+        (plugin done)
+        (plugin colored-man-pages)
+        (plugin fifc)
+        (plugin autopair)
+        (plugin git-abbr)
+        (plugin fzf-fish)
+      ];
   };
 
   programs.eza = {
