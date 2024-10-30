@@ -106,7 +106,7 @@ in
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      source <(zoxide init fish)
+      zoxide init fish | source
       source ~/.local/share/lscolors.fish
     '';
     plugins = 
