@@ -108,6 +108,10 @@ in
     interactiveShellInit = ''
       zoxide init fish | source
       source ~/.local/share/lscolors.fish
+
+      set -Ux fifc_editor hx
+      fifc \
+        --preview 'fish -c \"_fifc_action preview {} {q}\"'
     '';
     plugins = 
     let
@@ -117,7 +121,6 @@ in
       };
     in
     with pkgs.fishPlugins; [
-      (plugin async-prompt)
       (plugin done)
       (plugin colored-man-pages)
       (plugin fifc)
