@@ -117,7 +117,6 @@ in
       };
     in
     with pkgs.fishPlugins; [
-      (plugin async-prompt)
       (plugin done)
       (plugin colored-man-pages)
       (plugin fifc)
