@@ -38,6 +38,7 @@ in
     ripgrep
     fd
     sd
+    zoxide
   ];
 
   home.file = {
@@ -105,10 +106,18 @@ in
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      starship init fish | source
+      source <(zoxide init fish)
       source ~/.local/share/lscolors.fish
-      source ~
     '';
+    plugins = with pkgs.fishPlugins; [
+      async-prompt
+      done
+      colored-man-pages
+      fifc
+      autopair
+      git-abbr
+      fzf-fish
+    ];
   };
 
   programs.eza = {
