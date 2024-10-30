@@ -109,14 +109,21 @@ in
       source <(zoxide init fish)
       source ~/.local/share/lscolors.fish
     '';
-    plugins = with pkgs.fishPlugins; [
-      (async-prompt // { __ignoreNulls = null; })
-      done
-      colored-man-pages
-      fifc
-      autopair
-      git-abbr
-      fzf-fish
+    plugins = 
+    let
+      plugin = x: {
+        name = x.name;
+        src = x.src;
+      };
+    in
+    with pkgs.fishPlugins; [
+      (plugin async-prompt)
+      (plugin done)
+      (plugin colored-man-pages)
+      (plugin fifc)
+      (plugin autopair)
+      (plugin git-abbr)
+      (plugin fzf-fish)
     ];
   };
 
