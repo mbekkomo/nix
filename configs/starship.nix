@@ -8,7 +8,7 @@ _: {
 
   character =
     let
-      symbol = "►";
+      symbol = "🞂";
     in
     {
       success_symbol = "[${symbol}](bold green)";
@@ -17,5 +17,5 @@ _: {
 
   format = ''
     $username
-    $character'';
+    └╴$character'';
 }
