@@ -1,7 +1,7 @@
 _:
 let
   palette = {
-    grey = "fg:#a6a6a6";
+    grey = "bg:#a6a6a6";
   };
 in
 {
