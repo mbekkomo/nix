@@ -7,8 +7,8 @@ _: {
   };
 
   character = {
-    success_symbol = "";
-    error_symbol = "";
+    success_symbol = "[▲](bold green)";
+    error_symbol = "[▲](bold red)";
   };
 
   format = ''
