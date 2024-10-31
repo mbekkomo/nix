@@ -19,7 +19,7 @@ in
 
   directory =
     let
-      directory = "#668cf";
+      directory = "#668cff";
       readOnly = "#99b3ff";
     in
     {
