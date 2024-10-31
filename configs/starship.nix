@@ -23,7 +23,7 @@ in
 
   format = ''
     $username
-    [└─╴](dim black)$character'';
+    [└─╴](dimmed black)$character'';
 
   palettes.goat = palette;
   palette = "goat";
