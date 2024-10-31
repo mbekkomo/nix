@@ -20,12 +20,12 @@ in
   directory =
     let
       directory = "#3333ff";
-      readOnly = "#ff8533";
+      readOnly = "#99b3ff";
     in
     {
       style = "bold fg:${directory}";
       read_only_style = "fg:${readOnly}";
-      truncation_symbol = "…/";
+      read_only = "";
       format = "[$path]($style)[$read_only]($read_only_style)";
     };
 
