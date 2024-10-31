@@ -5,12 +5,28 @@ let
   };
 in
 {
-  username = {
-    style_root = "bold fg:#ff8533";
-    style_user = "bold fg:#ffff4d";
-    format = "[$user]($style)";
-    show_always = true;
-  };
+  username =
+    let
+      root = "#ff8533";
+      user = "#ffff4d";
+    in
+    {
+      style_root = "bold fg:${root}";
+      style_user = "bold fg:${user}";
+      format = "[$user]($style)";
+      show_always = true;
+    };
+
+  directory =
+    let
+      directory = "#3333ff";
+      readOnly = "#ff8533";
+    in
+    {
+      style = "bold fg:${directory}";
+      read_only_style = "fg:${readOnly}";
+      format = "[$path]($style)[$read_only]($read_only_style)";
+    };
 
   character =
     let
@@ -27,7 +43,7 @@ in
     };
 
   format = ''
-    $username
+    $username [@](grey) $directory
     [ └─╴](grey)$character'';
 
   palette = "goat";
