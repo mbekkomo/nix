@@ -49,7 +49,7 @@ in
     {
       symbol = "${symbol} ";
       style = "bold fg:${branch}";
-      format = "[$symbol$branch(:$remote_branch)]($style)";
+      format = "[$symbol$branch(:$remote_branch)]($style) ";
     };
 
   git_commit =
