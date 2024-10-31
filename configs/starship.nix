@@ -42,8 +42,9 @@ in
     };
 
   format = ''
-    $username [@](grey) $directory
-    ( [🞄](grey) $git)
+    $username [@](grey) $directory ${
+      "( [🞄](grey) $git)"
+    }
     [ └─╴](grey)$character'';
 
   palette = "goat";
