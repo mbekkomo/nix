@@ -45,7 +45,7 @@ in
     ".config/alacritty/themes/tokyonight.toml".source = ./configs/alacritty/tokyonight.toml;
     ".fonts/departuremono-nerdfont.otf".source = ./fonts/DepartureMonoNerdFont-Regular.otf;
     ".local/share/lscolors.fish".source = ./etc/lscolors.fish;
-    ".config/zls.json".text = builtins.toJSON import ./configs/zls.nix { };
+    ".config/zls.json".text = builtins.toJSON (import ./configs/zls.nix { });
   };
 
   home.sessionVariables = {
