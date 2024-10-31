@@ -41,6 +41,19 @@ in
       vimcmd_visual_symbol = "[${viSymbol}](bold yellow)";
     };
 
+  git_branch =
+    let
+      symbol = "";
+      branch = "#cc66ff";
+    in
+    {
+      symbol = "${symbol} ";
+      style = "bold fg:${branch}";
+      format = "[$symbol$branch(:$remote_branch)]($style)";
+    };
+
+  fill.symbol = " ";
+
   format =
     let
       dot = "[🞄](grey)";
@@ -48,7 +61,7 @@ in
     ''
       $username [@](grey) $directory$fill${
         # prevent nixfmt from formatting this line
-        "($git ${dot} )"
+        "($git)"
         #
         + ""
       }
