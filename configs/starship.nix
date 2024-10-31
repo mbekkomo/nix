@@ -41,10 +41,14 @@ in
       vimcmd_visual_symbol = "[${viSymbol}](bold yellow)";
     };
 
-  format = ''
+  format = 
+  let
+    dot = "[🞄](grey)";
+  in
+  ''
     $username [@](grey) $directory${
       # prevent nixfmt from formatting this line
-      "( [🞄](grey) $git)"
+      "($git ${dot} )"
       #
       + ""
     }
