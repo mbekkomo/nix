@@ -41,18 +41,18 @@ in
       vimcmd_visual_symbol = "[${viSymbol}](bold yellow)";
     };
 
-  format = 
-  let
-    dot = "[🞄](grey)";
-  in
-  ''
-    $username [@](grey) $directory${
-      # prevent nixfmt from formatting this line
-      "($git ${dot} )"
-      #
-      + ""
-    }
-    [ └─╴](grey)$character'';
+  format =
+    let
+      dot = "[🞄](grey)";
+    in
+    ''
+      $username [@](grey) $directory$fill${
+        # prevent nixfmt from formatting this line
+        "($git ${dot} )"
+        #
+        + ""
+      }
+      [ └─╴](grey)$character'';
 
   palette = "goat";
   palettes.goat = palette;
