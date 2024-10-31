@@ -25,6 +25,7 @@ in
     {
       style = "bold fg:${directory}";
       read_only_style = "fg:${readOnly}";
+      truncation_symbol = "…/";
       format = "[$path]($style)[$read_only]($read_only_style)";
     };
 
