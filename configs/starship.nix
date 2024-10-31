@@ -30,6 +30,6 @@ in
     $username
     [ └─╴](grey)$character'';
 
-  palettes.goat = palette;
   palette = "goat";
+  palettes.goat = palette;
 }
