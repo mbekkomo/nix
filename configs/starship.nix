@@ -42,7 +42,7 @@ in
     };
 
   format = ''
-    $username [@](grey) $directory ${
+    $username [@](grey) $directory${
       # prevent nixfmt from formatting this line
       "( [🞄](grey) $git)"
       #
