@@ -52,6 +52,18 @@ in
       format = "[$symbol$branch(:$remote_branch)]($style)";
     };
 
+  git_commit =
+    let
+      symbol = "";
+      commit = "#4dff4d";
+    in
+    {
+      tag_symbol = " ${symbol} ";
+      style = "bold fg:${commit}";
+    };
+
+  git_state.style = "bold fg:#66ffe0";
+
   fill.symbol = " ";
 
   format =
@@ -61,7 +73,7 @@ in
     ''
       $username [@](grey) $directory$fill${
         # prevent nixfmt from formatting this line
-        "($git)"
+        "$git_branch$git_commit$git_state$git_metrics$git_status"
         #
         + ""
       }
