@@ -46,7 +46,7 @@ in
       # prevent nixfmt from formatting this line
       "( [🞄](grey) $git)"
       #
-    + ""
+      + ""
     }
     [ └─╴](grey)$character'';
 
