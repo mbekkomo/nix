@@ -23,8 +23,8 @@ in
     in
     {
       style = "bold fg:${directory}";
-      read_only = "";
-      format = "[$read_only]($style) [$path]($style)";
+      read_only = " ";
+      format = "[$read_only]($style)[$path]($style)";
     };
 
   character =
