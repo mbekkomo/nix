@@ -77,6 +77,7 @@ in
       lua-language-server
       nil
       bash-language-server
+      emmet-language-server
     ];
     settings = import ./configs/helix.nix { };
     languages = import ./configs/hx-langs.nix { };
