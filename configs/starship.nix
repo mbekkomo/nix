@@ -6,7 +6,12 @@ _: {
     show_always = true;
   };
 
+  character = {
+    success_symbol = "";
+    error_symbol = "";
+  };
+
   format = ''
   $username
-  > '';
+  $character'';
 }
