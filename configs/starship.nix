@@ -8,7 +8,7 @@ in
   username =
     let
       root = "#ff8533";
-      user = "#ffff4d";
+      user = "#ffff80";
     in
     {
       style_root = "bold fg:${root}";
