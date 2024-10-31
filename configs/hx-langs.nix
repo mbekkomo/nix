@@ -7,14 +7,14 @@ _: {
 
   language-server.emmet-langserver = {
     command = "emmet-language-server";
-    args = ["--stdio"];
+    args = [ "--stdio" ];
   };
 
   language = [
     {
       name = "html";
-      roots = [".git"];
-      language-servers = ["emmet-langserver"];
+      roots = [ ".git" ];
+      language-servers = [ "emmet-langserver" ];
     }
   ];
 }

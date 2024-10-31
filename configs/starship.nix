@@ -20,9 +20,9 @@ in
     {
       success_symbol = "[${symbol}](bold green)";
       error_symbol = "[${symbol}](bold red)";
-      vimcmd_symbol	= "[${viSymbol}](bold green)";
-      vimcmd_replace_one_symbol	= "[${viSymbol}](bold purple)";
-      vimcmd_replace_symbol	= "[${viSymbol}](bold purple)";
+      vimcmd_symbol = "[${viSymbol}](bold green)";
+      vimcmd_replace_one_symbol = "[${viSymbol}](bold purple)";
+      vimcmd_replace_symbol = "[${viSymbol}](bold purple)";
       vimcmd_visual_symbol = "[${viSymbol}](bold yellow)";
     };
 
