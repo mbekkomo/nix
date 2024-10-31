@@ -1,1 +1,3 @@
-{ ... }: { }
+_: {
+  theme = "tokyo-night";
+}
