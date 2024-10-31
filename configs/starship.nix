@@ -1,4 +1,10 @@
-_: {
+_: 
+let
+  palette = {
+    
+  };
+in
+{
   username = {
     style_root = "bold fg:#ff8533";
     style_user = "bold fg:#ffff4d";
@@ -18,4 +24,7 @@ _: {
   format = ''
     $username
     └╴$character'';
+
+  palettes.goat = palette;
+  palette = "goat";
 }
