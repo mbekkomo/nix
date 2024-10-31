@@ -45,6 +45,7 @@ in
 
   home.file = {
     ".config/alacritty/themes/tokyonight.toml".source = ./configs/alacritty/tokyonight.toml;
+    ".local/share/blackbox/schemes/tokyonight.json".source = ./etc/blackbox/tokyonight.json;
     ".fonts/departuremono-nerdfont.otf".source = ./fonts/DepartureMonoNerdFont-Regular.otf;
     ".local/share/lscolors.fish".source = ./etc/lscolors.fish;
     ".config/zls.json".text = builtins.toJSON (import ./configs/zls.nix { });
