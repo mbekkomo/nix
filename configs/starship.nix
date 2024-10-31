@@ -7,15 +7,15 @@ _: {
   };
 
   character =
-  let
-    symbol = "▲";
-  in
-  {
-    success_symbol = "[▲](bold green)";
-    error_symbol = "[▲](bold red)";
-  };
+    let
+      symbol = "►";
+    in
+    {
+      success_symbol = "[${symbol}](bold green)";
+      error_symbol = "[${symbol}](bold red)";
+    };
 
   format = ''
-  $username
-  $character'';
+    $username
+    $character'';
 }
