@@ -78,6 +78,7 @@ in
       nil
       bash-language-server
       emmet-language-server
+      zls
     ];
     settings = import ./configs/helix.nix { };
     languages = import ./configs/hx-langs.nix { };
