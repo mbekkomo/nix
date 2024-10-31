@@ -8,5 +8,5 @@ _: {
 
   format = ''
   $username
-  >'';
+  > '';
 }
