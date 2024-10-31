@@ -6,7 +6,11 @@ _: {
     show_always = true;
   };
 
-  character = {
+  character =
+  let
+    symbol = "▲";
+  in
+  {
     success_symbol = "[▲](bold green)";
     error_symbol = "[▲](bold red)";
   };
