@@ -44,6 +44,7 @@ in
   format = ''
     $username [@](grey) $directory ${
       "( [🞄](grey) $git)"
+    + ""
     }
     [ └─╴](grey)$character'';
 
