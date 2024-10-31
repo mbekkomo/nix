@@ -1,7 +1,7 @@
 _:
 let
   palette = {
-
+    grey = "fg:#a6a6a6";
   };
 in
 {
@@ -23,7 +23,7 @@ in
 
   format = ''
     $username
-    [└─╴](dimmed black)$character'';
+    [└─╴](grey)$character'';
 
   palettes.goat = palette;
   palette = "goat";
