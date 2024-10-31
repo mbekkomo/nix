@@ -20,13 +20,13 @@ in
   directory =
     let
       directory = "#668cff";
-      readOnly = "#99b3ff";
+      readOnly = "#ffa31a";
     in
     {
       style = "bold fg:${directory}";
-      # read_only_style = "";
+      read_only_style = "fg:${readOnly}";
       read_only = "";
-      format = "[$read_only](fg:${readOnly})[$path]($style)";
+      format = "[$read_only]($read_only_style)[$path]($style)";
     };
 
   character =
