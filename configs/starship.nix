@@ -42,7 +42,7 @@ in
     };
 
   format = ''
-    $username [@](grey) $directory\
+    $username [@](grey) $directory
     ( [🞄](grey) $git)
     [ └─╴](grey)$character'';
 
