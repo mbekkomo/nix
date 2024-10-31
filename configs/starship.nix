@@ -1,7 +1,7 @@
-_: 
+_:
 let
   palette = {
-    
+
   };
 in
 {
@@ -23,7 +23,7 @@ in
 
   format = ''
     $username
-    └╴$character'';
+    [└─╴](dim black)$character'';
 
   palettes.goat = palette;
   palette = "goat";
