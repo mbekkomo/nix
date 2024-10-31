@@ -30,6 +30,8 @@ in
     '')
     etcpkgs.nix-search
 
+    blackbox-terminal
+
     nixfmt-rfc-style
     shellcheck
     moar
