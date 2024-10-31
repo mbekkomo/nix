@@ -24,9 +24,9 @@ in
     in
     {
       style = "bold fg:${directory}";
-      read_only_style = "fg:${readOnly}";
+      # read_only_style = "";
       read_only = "";
-      format = "[$read_only]($read_only_style)[$path]($style)";
+      format = "[$read_only](fg:${readOnly})[$path]($style)";
     };
 
   character =
