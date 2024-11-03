@@ -30,7 +30,7 @@ in
     '')
     etcpkgs.nix-search
 
-    blackbox-terminal
+    (wrapGL blackbox-terminal)
 
     nixfmt-rfc-style
     shellcheck
