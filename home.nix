@@ -41,6 +41,7 @@ in
     fd
     sd
     zoxide
+    bat
   ];
 
   home.file = {
