@@ -42,6 +42,7 @@ in
     sd
     zoxide
     bat
+    sigi
   ];
 
   home.file = {
