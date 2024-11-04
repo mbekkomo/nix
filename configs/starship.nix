@@ -79,7 +79,7 @@ in
       inherit renamed;
       inherit deleted;
 
-      format = "([$all_status$ahead_behind]($style) )";
+      # format = "(([\\($all_status$ahead_behind\]($style) )";
     };
 
   fill.symbol = " ";
