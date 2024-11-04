@@ -86,7 +86,7 @@ in
     in {
       inherit symbol;
       style = "bold fg:110";
-      format = " [$symbol]($style) ";
+      format = "[$symbol]($style) ";
     };
 
   fill.symbol = " ";
