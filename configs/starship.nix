@@ -80,6 +80,15 @@ in
       inherit deleted;
     };
 
+  env_var.NIX_SHELL =
+    let
+      symbol = "󱄅";
+    in {
+      inherit symbol;
+      style = "bold fg:110";
+      format = " [$symbol]($style) ";
+    };
+
   fill.symbol = " ";
 
   format =
@@ -87,7 +96,7 @@ in
       dot = "[🞄](grey)";
     in
     ''
-      $battery$username [@](grey) $directory$fill${
+      $battery$${env_var.NIX_SHELL}$username [@](grey) $directory$fill${
         # prevent nixfmt from formatting this line
         "$git_branch$git_commit$git_state$git_metrics$git_status"
         #
