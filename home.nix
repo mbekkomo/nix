@@ -51,7 +51,7 @@ in
     ".fonts/departuremono-nerdfont.otf".source = ./fonts/DepartureMonoNerdFont-Regular.otf;
     ".config/zls.json".text = builtins.toJSON (import ./configs/zls.nix { });
 
-    ".config/fish/functions/lscolors.fish".source = ./etc/lscolors.fish;
+    ".config/fish/lscolors.fish".source = ./etc/lscolors.fish;
     ".config/fish/functions/nixs.fish".source = ./shells/nixs.fish;
     ".config/fish/functions/nixd.fish".source = ./shells/nixd.fish;
   };
@@ -129,7 +129,7 @@ in
     enable = true;
     interactiveShellInit = ''
       zoxide init fish | source
-      # source ~/.local/share/lscolors.fish
+      source ~/.config/fish/lscolors.fish
 
       set -Ux fifc_editor hx
 
