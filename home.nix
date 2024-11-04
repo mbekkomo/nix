@@ -19,6 +19,14 @@ let
   };
 in
 {
+  imports = [
+    (
+      let
+        declCachix = builtins.fetchTarball "https://github.com/jonascarpay/declarative-cachix/archive/a2aead56e21e81e3eda1dc58ac2d5e1dc4bf05d7.tar.gz";
+      in import "${declCachix}/home-manager.nix"
+    )
+  ];
+
   programs.home-manager.enable = true;
   home.username = username;
   home.homeDirectory = homeDir;
@@ -76,6 +84,20 @@ in
     defaultWrapper = "mesa";
     installScripts = [ "mesa" ];
   };
+
+  services.git-sync = {
+    enable = true;
+    repositories."dotfiles" = {
+      path = "${homeDir}/dotfiles";
+      uri = "https://github.com/mbekkomo/dotfiles.git";
+    };
+  };
+
+  services.arrpc.enable = true;
+
+  caches.cachix = [
+    "mbekkomo"
+  ];
 
   programs.helix = {
     enable = true;
@@ -220,14 +242,4 @@ in
       rdl = "repo delete --yes";
     };
   };
-
-  services.git-sync = {
-    enable = true;
-    repositories."dotfiles" = {
-      path = "${homeDir}/dotfiles";
-      uri = "https://github.com/mbekkomo/dotfiles.git";
-    };
-  };
-
-  services.arrpc.enable = true;
 }
