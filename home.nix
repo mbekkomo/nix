@@ -66,8 +66,9 @@ in
         "nix-command"
         "flakes"
       ];
-      allowed-users = [ username ];
+      allowed-users = [ "root" username ];
     };
+    gc.automatic = true;
   };
 
   nixGL = {
