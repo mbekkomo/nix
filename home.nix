@@ -49,8 +49,11 @@ in
     ".config/alacritty/themes/tokyonight.toml".source = ./configs/alacritty/tokyonight.toml;
     ".local/share/blackbox/schemes/tokyonight.json".source = ./etc/blackbox/tokyonight.json;
     ".fonts/departuremono-nerdfont.otf".source = ./fonts/DepartureMonoNerdFont-Regular.otf;
-    ".local/share/lscolors.fish".source = ./etc/lscolors.fish;
     ".config/zls.json".text = builtins.toJSON (import ./configs/zls.nix { });
+
+    ".config/fish/functions/lscolors.fish".source = ./etc/lscolors.fish;
+    ".config/fish/functions/nixs.fish".source = ./shells/nixs.fish;
+    ".config/fish/functions/nixd.fish".source = ./shells/nixd.fish;
   };
 
   home.sessionVariables = {
@@ -126,7 +129,7 @@ in
     enable = true;
     interactiveShellInit = ''
       zoxide init fish | source
-      source ~/.local/share/lscolors.fish
+      # source ~/.local/share/lscolors.fish
 
       set -Ux fifc_editor hx
 
