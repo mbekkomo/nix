@@ -49,7 +49,7 @@ in
     {
       symbol = "${symbol} ";
       style = "bold fg:${branch}";
-      format = "[$symbol$branch(:$remote_branch)]($style) ";
+      format = "([$symbol$branch(:$remote_branch)]($style) )";
     };
 
   git_commit =
@@ -64,6 +64,24 @@ in
 
   git_state.style = "bold fg:#66ffe0";
 
+  git_status =
+    let
+      conflicted = "󰦍";
+      ahead = "󱊽";
+      behind = "󱊾";
+      renamed = "󰏫";
+      deleted = "";
+    in
+    {
+      inherit conflicted;
+      inherit ahead;
+      inherit behind;
+      inherit renamed;
+      inherit deleted;
+
+      format = "([$all_status$ahead_behind]($style) )";
+    };
+
   fill.symbol = " ";
 
   format =
@@ -75,7 +93,7 @@ in
         # prevent nixfmt from formatting this line
         "$git_branch$git_commit$git_state$git_metrics$git_status"
         #
-        + ""
+        # + "$cmd_duration"
       }
       [ └─╴](grey)$character'';
 
