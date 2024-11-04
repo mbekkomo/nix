@@ -66,7 +66,7 @@ in
         "nix-command"
         "flakes"
       ];
-      allowed-users = [ "root" username ];
+      allowed-users = [ username ];
     };
     gc.automatic = true;
   };
