@@ -78,8 +78,6 @@ in
       inherit behind;
       inherit renamed;
       inherit deleted;
-
-      # format = "(([\\($all_status$ahead_behind\]($style) )";
     };
 
   fill.symbol = " ";
@@ -89,7 +87,7 @@ in
       dot = "[🞄](grey)";
     in
     ''
-      $username [@](grey) $directory$fill${
+      $battery$username [@](grey) $directory$fill${
         # prevent nixfmt from formatting this line
         "$git_branch$git_commit$git_state$git_metrics$git_status"
         #
