@@ -83,7 +83,7 @@ in
   services.git-sync = {
     enable = true;
     repositories."dotfiles" = {
-      path = "${homeDir}/dotfiles";
+      path = "${homeDir}/nix";
       uri = "https://github.com/mbekkomo/dotfiles.git";
     };
   };
