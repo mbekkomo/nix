@@ -82,9 +82,9 @@ in
 
   services.git-sync = {
     enable = true;
-    repositories."dotfiles" = {
+    repositories."nix" = {
       path = "${homeDir}/nix";
-      uri = "https://github.com/mbekkomo/dotfiles.git";
+      uri = "https://github.com/mbekkomo/nix.git";
     };
   };
 
@@ -154,7 +154,6 @@ in
         (plugin fifc)
         (plugin autopair)
         (plugin git-abbr)
-        (plugin fzf-fish)
       ];
   };
 
