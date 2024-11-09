@@ -1,4 +1,3 @@
-
 task.checkout() {
   git checkout
 }
