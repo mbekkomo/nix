@@ -55,7 +55,7 @@
         modules = [
           declarative-cachix.homeManagerModules.declarative-cachix
           nix-index-database.hmModules.nix-index
-          battery-notifier.homeManagerModules.default
+          battery-notifier.homeManagerModule.default
           ./home.nix
           catppuccin.homeManagerModules.catppuccin
         ];
