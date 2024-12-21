@@ -22,6 +22,10 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     nix-std.url = "github:chessai/nix-std";
+    battery-notifier = {
+      url = "github:luisnquin/battery-notifier";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,6 +38,7 @@
       nix-index-database,
       catppuccin,
       nix-std,
+      battery-notifier,
       ...
     }:
     let
@@ -50,6 +55,7 @@
         modules = [
           declarative-cachix.homeManagerModules.declarative-cachix
           nix-index-database.hmModules.nix-index
+          battery-notifier.homeManagerModules.default
           ./home.nix
           catppuccin.homeManagerModules.catppuccin
         ];
