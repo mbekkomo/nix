@@ -170,7 +170,6 @@ in
     "io.github.zen_browser.zen" # Browser
     "io.github.equicord.equibop" # Discord
     "im.nheko.Nheko" # Matrix
-    "dev.toastbits.spmp" # Music
     "io.itch.itch"
     "com.interversehq.qView"
   ];
