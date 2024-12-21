@@ -59,6 +59,7 @@ in
     moar
     glow
     libnotify
+    unzip
 
     # Something that would ease me off
     fzf
@@ -78,9 +79,6 @@ in
     playerctl
     hyprpolkitagent
     clipse
-
-    # stupid bloat shits why the fuck do i even install these
-    dissent
   ];
 
   home.file =
