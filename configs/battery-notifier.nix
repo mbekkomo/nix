@@ -1,7 +1,7 @@
 { root, ... }: {
   interval_ms = 5000;
 
-  remainder = {
+  reminder = {
     threshold = 30;
     title = "don't forget to charge :3";
     content = "your battery percentage is 30%, don't forget to charge";
