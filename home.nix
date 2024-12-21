@@ -72,13 +72,16 @@ in
     gum
 
     # For hyprland
-    dolphin
+    hyprshot
     pamixer
     wl-clipboard
     alsa-utils
     playerctl
     hyprpolkitagent
     clipse
+
+    # i don't fucking know why i installed these shits but i installed them anyway
+    youtube-music
   ];
 
   home.file =
