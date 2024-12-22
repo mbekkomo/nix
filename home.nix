@@ -313,11 +313,13 @@ in
 
   programs.hyprlock = {
     enable = true;
+    catppuccin.enable = true;
     settings = loadConfig "hypr/lock" { };
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
+    catppuccin.enable = true;
     # TODO: Migrate to Nix expression
     settings = loadConfig "hypr/wm" { };
     importantPrefixes = [
@@ -343,7 +345,6 @@ in
       ################
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
-      monitor=,preferred,auto,auto
 
       ###################
       ### MY PROGRAMS ###
