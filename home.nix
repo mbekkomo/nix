@@ -281,11 +281,15 @@ in
     enable = true;
   };
 
-  services.dunst.enable = true;
+  services.dunst = {
+    enable = true;
+    catppuccin.enable = true;
+  };
 
   programs.waybar = {
     enable = true;
     settings = loadConfig "waybar" { };
+    catppuccin.enable = true;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
