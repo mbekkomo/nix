@@ -65,6 +65,9 @@ in
     gptfdisk
     efibootmgr
     udisks
+
+    # useless things
+    openutau
   ];
 
   networking.networkmanager.enable = true;
