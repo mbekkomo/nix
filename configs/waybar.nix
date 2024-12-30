@@ -1,1 +1,29 @@
-_: { }
+{ root, ... }:
+{
+  modules-left = [
+    "hyprland/workspaces"
+    "hyprland/submap"
+  ];
+
+  modules-center = [
+    "hyprland/window"
+  ];
+
+  modules-right = [
+    "mpd"
+    "idle_inhibitor"
+    "pulseaudio"
+    "network"
+    "power-profiles-daemon"
+    "cpu"
+    "memory"
+    "temperature"
+    "backlight"
+    "keyboard-state"
+    "sway/language"
+    "battery"
+    "battery#bat2"
+    "clock"
+    "tray"
+  ];
+}
