@@ -148,7 +148,8 @@ in
     gutenprint
     gutenprintBin
     (epson-201401w.overrideAttrs {
-      preConfigure = lib.mkAfter ''
+      preConfigure = ''
+        chmod +x configure
         export CFLAGS="-Wno-error=incompatible-pointer-types"
       '';
     }) # incase my Epson L310 is being a bad bitch
