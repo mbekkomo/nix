@@ -148,7 +148,7 @@ in
     gutenprint
     gutenprintBin
     (epson-201401w.overrideAttrs {
-      env.CFLAGS = "-Wno-error=incompatible-pointer-types";
+      env.NIX_COMPILE_CFLAGS = "-Wno-error=incompatible-pointer-types";
     }) # incase my Epson L310 is being a bad bitch
   ];
   services.avahi = {
