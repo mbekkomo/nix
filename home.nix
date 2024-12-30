@@ -107,6 +107,7 @@ in
   catppuccin.enable = true;
 
   catppuccin = {
+    cursors.enable = true;
     gtk.enable = true;
   };
 
