@@ -150,7 +150,7 @@ in
     (epson-201401w.overrideAttrs {
       preConfigure = ''
         chmod +x configure
-        export CFLAGS="-Wno-error=incompatible-pointer-types"
+        export CFLAGS="-Wno-incompatible-pointer-types"
       '';
     }) # incase my Epson L310 is being a bad bitch
   ];
