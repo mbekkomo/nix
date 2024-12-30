@@ -104,6 +104,15 @@ in
   catppuccin.flavor = "mocha";
   catppuccin.enable = true;
 
+  catppuccin = {
+    waybar.enable = true;
+    hyprlock.enable = true;
+    hyprland.enable = true;
+    gtk.enable = true;
+    dunst.enable = true;
+    alacritty.enable = true;
+  };
+
   nix = {
     package = pkgs.nix;
     settings = {
@@ -185,7 +194,6 @@ in
     enable = true;
     package = wrapGL pkgs.alacritty;
     settings = loadConfig "alacritty" { };
-    catppuccin.enable = true;
   };
 
   programs.zellij = {
@@ -283,13 +291,11 @@ in
 
   services.dunst = {
     enable = true;
-    catppuccin.enable = true;
   };
 
   programs.waybar = {
     enable = true;
     settings = loadConfig "waybar" { };
-    catppuccin.enable = true;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -308,13 +314,11 @@ in
 
   programs.hyprlock = {
     enable = true;
-    catppuccin.enable = true;
     settings = loadConfig "hypr/lock" { };
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
-    catppuccin.enable = true;
     # TODO: Migrate to Nix expression
     settings = loadConfig "hypr/wm" { };
     importantPrefixes = [
@@ -563,6 +567,5 @@ in
 
   gtk = {
     enable = true;
-    catppuccin.enable = true;
   };
 }
