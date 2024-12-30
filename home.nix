@@ -296,11 +296,6 @@ in
     };
   };
 
-  services.battery-notifier = {
-    enable = true;
-    settings = loadConfig "battery-notifier" { };
-  };
-
   programs.wpaperd = {
     enable = true;
     settings = loadConfig "wpaperd" { };
