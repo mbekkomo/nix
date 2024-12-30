@@ -147,7 +147,7 @@ in
   services.printing.drivers = with pkgs; [
     gutenprint
     gutenprintBin
-    (epson-201401w.packageOverrides {
+    (epson-201401w.overrideAttrs {
       preConfigure = lib.mkAfter ''
         export CFLAGS="-Wno-error=incompatible-pointer-types"
       '';
