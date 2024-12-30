@@ -297,7 +297,7 @@ in
   programs.waybar = {
     enable = true;
     settings = loadConfig "waybar" { };
-    style = lib.mkDefault builtins.readFile ./configs/waybar/style.css;
+    style = lib.mkDefault (builtins.readFile ./configs/waybar/style.css);
     systemd = {
       enable = true;
       target = "hyprland-session.target";
