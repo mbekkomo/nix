@@ -1,6 +1,9 @@
 { root, ... }:
 {
   mainBar = {
+    height = 20;
+    spacing = 4;
+  
     modules-left = [
       "hyprland/workspaces"
       "hyprland/submap"
