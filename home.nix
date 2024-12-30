@@ -103,15 +103,11 @@ in
   };
 
   catppuccin.flavor = "mocha";
+  catppuccin.accent = "blue";
   catppuccin.enable = true;
 
   catppuccin = {
-    waybar.enable = true;
-    hyprlock.enable = true;
-    hyprland.enable = true;
     gtk.enable = true;
-    dunst.enable = true;
-    alacritty.enable = true;
   };
 
   nix = {
