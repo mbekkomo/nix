@@ -147,7 +147,11 @@ in
   services.printing.drivers = with pkgs; [
     gutenprint
     gutenprintBin
-    epson-201401w # incase my Epson L310 is being a bad bitch
+    (epson-201401w.packageOverrides {
+      preConfigure = lib.mkAfter ''
+        export CFLAGS="-Wno-error=incompatible-pointer-type"
+      '';
+    }) # incase my Epson L310 is being a bad bitch
   ];
   services.avahi = {
     enable = true;
