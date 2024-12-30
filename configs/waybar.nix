@@ -20,7 +20,7 @@
     "temperature"
     "backlight"
     "keyboard-state"
-    "sway/language"
+    "hyprland/language"
     "battery"
     "battery#bat2"
     "clock"
