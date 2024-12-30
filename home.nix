@@ -3,6 +3,7 @@
   pkgs,
   etcpkgs,
   std,
+  lib,
   ...
 }@inputs:
 let
@@ -296,7 +297,7 @@ in
   programs.waybar = {
     enable = true;
     settings = loadConfig "waybar" { };
-    style = ./configs/waybar/style.css;
+    style = lib.mkAfter ./configs/waybar/style.css;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
