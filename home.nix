@@ -40,54 +40,56 @@ in
   home.homeDirectory = homeDir;
   home.stateVersion = "24.05"; # do not change
 
-  home.packages = with pkgs; [
-    # Fonts
-    departure-nf
-    noto-fonts
-    noto-fonts-color-emoji
+  home.packages =
+    with pkgs;
+    [
+      # Fonts
+      departure-nf
+      noto-fonts
+      noto-fonts-color-emoji
 
-    # Nix-purpose
-    etcpkgs.nix-search
-    cachix
+      # Nix-purpose
+      etcpkgs.nix-search
+      cachix
 
-    # Devtools
-    devenv
-    nixfmt-rfc-style
-    shellcheck
+      # Devtools
+      devenv
+      nixfmt-rfc-style
+      shellcheck
 
-    # Misc.
-    micro
-    moar
-    glow
-    libnotify
-    unzip
+      # Misc.
+      micro
+      moar
+      glow
+      libnotify
+      unzip
 
-    # Something that would ease me off
-    fzf
-    ripgrep
-    fd
-    sd
-    zoxide
-    bat
-    sigi
-    gum
+      # Something that would ease me off
+      fzf
+      ripgrep
+      fd
+      sd
+      zoxide
+      bat
+      sigi
+      gum
 
-    # For hyprland
-    hyprshot
-    pamixer
-    wl-clipboard
-    alsa-utils
-    playerctl
-    hyprpolkitagent
-    clipse
+      # For hyprland
+      hyprshot
+      pamixer
+      wl-clipboard
+      alsa-utils
+      playerctl
+      hyprpolkitagent
+      clipse
 
-    # i don't fucking know why i installed these shits but i installed them anyway
-    youtube-music
-    openutau
-    (with nur.repos.mbekkomo; [
+      # i don't fucking know why i installed these shits but i installed them anyway
+      youtube-music
+      openutau
+    ]
+    ++ (with nur.repos.mbekkomo; [
       sklauncher
-    ])
-  ];
+    ]);
 
   home.file =
     # External Config
