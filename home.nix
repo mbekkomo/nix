@@ -88,7 +88,7 @@ in
       openutau
     ]
     ++ (with nur.repos.mbekkomo; [
-      sklauncher
+      (wrapGL sklauncher)
     ]);
 
   home.file =
