@@ -47,7 +47,7 @@
           x = (builtins.getEnv "NIXPKGS_SYSTEM");
         in
         if x == "" then "x86_64-linux" else x;
-      pkgs = import nixpkgs { inherit system; overlays = [ nur.overlay ] };
+      pkgs = import nixpkgs { inherit system; overlays = [ nur.overlay ]; };
     in
     {
       homeConfigurations.goat = home-manager.lib.homeManagerConfiguration {
