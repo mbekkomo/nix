@@ -1,6 +1,7 @@
 { root, ... }:
 {
   mainBar = {
+    reload_style_on_change = true;
     height = 20;
     spacing = 4;
   
