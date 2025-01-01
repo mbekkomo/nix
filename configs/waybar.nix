@@ -1,4 +1,8 @@
 { root, ... }:
+let
+  colorscheme = {
+  };
+in
 {
   mainBar = {
     reload_style_on_change = true;
@@ -35,5 +39,15 @@
     modules-left = [
       "clock"
     ];
+
+    modules-center = [
+      "hyprland/window"
+    ];
+
+    "hyprland/window" = {
+      rewrite = {
+        "(.*) "
+      };
+    };
   };
 }
