@@ -1,4 +1,4 @@
-@import "./webfont.css";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 * {
   font-family: DepartureMono Nerd Font, sans-serif;
