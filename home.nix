@@ -103,7 +103,9 @@ in
       ".config/fish/functions/nixd.fish".source = ./shells/nixd.fish;
       # Waybar
       ".config/waybar/webfont.css".source = builtins.fetchurl "https://www.nerdfonts.com/assets/css/webfont.css";
-      ".config/waybar/fonts/Symbols-2048-em Nerd Font Complete.woff2".source = builtins.fetchurl "https://www.nerdfonts.com/assets/fonts/Symbols-2048-em Nerd Font Complete.woff2";
+      ".config/waybar/fonts/Symbols-2048-em Nerd Font Complete.woff2".source = builtins.fetchurl {
+        url = "https://www.nerdfonts.com/assets/fonts/Symbols-2048-em Nerd Font Complete.woff2";
+      };
     };
 
   home.sessionVariables = {
