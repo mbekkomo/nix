@@ -1,8 +1,0 @@
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
-
-* {
-  font-family: DepartureMono Nerd Font, sans-serif;
-  font-size: 13px;
-}
-
-

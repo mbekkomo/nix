@@ -101,6 +101,8 @@ in
     // {
       ".config/fish/functions/nixs.fish".source = ./shells/nixs.fish;
       ".config/fish/functions/nixd.fish".source = ./shells/nixd.fish;
+      # Waybar
+      ".config/waybar/we"
     };
 
   home.sessionVariables = {
