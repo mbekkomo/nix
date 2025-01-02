@@ -104,7 +104,7 @@ in
       # Waybar
       ".config/waybar/webfont.css".source = builtins.fetchurl "https://www.nerdfonts.com/assets/css/webfont.css";
       ".config/waybar/fonts/Symbols-2048-em Nerd Font Complete.woff2".source = builtins.fetchurl {
-        url = "https://www.nerdfonts.com/assets/fonts/Symbols-2048-em Nerd Font Complete.woff2";
+        url = "https://www.nerdfonts.com/assets/fonts/Symbols-2048-em%20Nerd%20Font%20Complete.woff2";
         name = "font.woff2";
       };
     };
