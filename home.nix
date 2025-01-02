@@ -306,7 +306,6 @@ in
     enable = true;
     settings = loadConfig "waybar" { };
     style = ''
-      ${builtins.readFile (builtins.fetchurl "https://www.nerdfonts.com/assets/css/webfont.css")}
       ${builtins.readFile ./configs/waybar/style.css}
     '';
     systemd = {
