@@ -48,7 +48,7 @@ in
 
     "hyprland/window" = {
       rewrite = {
-        "(.*) " = ''${nfIcon "nf-fa-globe"} $1'';
+        "(.*) — Zen Browser" = ''${nfIcon "nf-fa-globe"} $1'';
       };
     };
   };
