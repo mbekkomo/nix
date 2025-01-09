@@ -1,8 +1,16 @@
-### Nix config and dotfiles for my machines >:3
+### Nix config :3
 
-To use the config, run `git checkout <branch>` where `branch` is a branch that is listed below:
- - HP 240 G5 Notebook: `HP-240-G5-Notebook-PC`
+How to use it:
+```sh
+# If you're only wanted to use the dotfiles
+$ ./bake switch-hm
 
-The branch name is based on output of `sed 's| |-|g' /sys/devices/virtual/dmi/id/product_name` or if Android (nix-on-droid), `adb shell getprop ro.product.vendor.model`.
+# Otherwise
+$ ./bake list-nixos # List NixOS configuration
+# ./bake switch-nixos [config] # Switch to [config] NixOS configuration
+# ./bake boot-nixos [config] # Switch to [config] NixOS configuration at boot
 
-If you only here for the dotfiles, it's in the `dotfiles` branch.
+$ ./bake list-nix-on-droid # List nix-on-droid configuration
+$ ./bake switch-nix-on-droid [config] # Switch to [config] nix-on-droid configuration
+```
+
