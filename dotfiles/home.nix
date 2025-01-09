@@ -39,6 +39,9 @@ in
   home.homeDirectory = homeDir;
   home.stateVersion = "24.05"; # do not change
 
+  # the fucking problem that makes home-manager switch slow
+  news.display = "silent";
+
   home.packages =
     with pkgs;
     [
