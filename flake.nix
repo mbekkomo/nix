@@ -27,7 +27,10 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     nix-std.url = "github:chessai/nix-std";
-    refind-module.url = "git+https://gist.github.com/mbekkomo/ba3d86f021aec0f73ceec4047365ef5b";
+    refind-module = {
+      url = "git+https://gist.github.com/mbekkomo/ba3d86f021aec0f73ceec4047365ef5b";
+      flake = false;
+    };
   };
 
   outputs =
