@@ -1,4 +1,5 @@
-{ root, ... }: {
+{ root, ... }:
+{
   interval_ms = 5000;
 
   reminder = {

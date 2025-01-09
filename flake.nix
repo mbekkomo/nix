@@ -60,7 +60,7 @@
           nur.overlay
           (_: _: {
             nix-search = nix-search-cli.outputs.packages.${system};
-           nixGLPackages = nixGL.outputs.packages.${system};
+            nixGLPackages = nixGL.outputs.packages.${system};
           })
         ];
       };
@@ -76,7 +76,7 @@
         ];
         extraSpecialArgs.std = nix-std.lib;
       };
-      
+
       nixosConfigurations.HP-240-G5-Notebook-PC = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -85,7 +85,7 @@
           ./HP-240-G5-Notebook-PC/configuration.nix
         ];
       };
-      
+
       nixosConfigurations.Aspire-TC-605 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [

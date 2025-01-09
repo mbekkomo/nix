@@ -140,7 +140,7 @@ in
     xwayland.enable = true;
   };
 
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
 
   services.avahi = {
     enable = true;

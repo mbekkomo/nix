@@ -12,7 +12,7 @@ _: {
   language-server.ccls.command = "ccls";
   language-server.superhtml = {
     command = "superhtml";
-    args = ["lsp"];
+    args = [ "lsp" ];
   };
   language-server.tailwindcss-langserver = {
     command = "tailwindcss-language-server";
@@ -31,7 +31,10 @@ _: {
       {
         name = "html";
         roots = [ ".git" ];
-        language-servers = [ "emmet-langserver" "superhtml" ];
+        language-servers = [
+          "emmet-langserver"
+          "superhtml"
+        ];
       }
       {
         inherit indent;

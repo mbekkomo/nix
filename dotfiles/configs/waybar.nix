@@ -10,7 +10,7 @@ in
     reload_style_on_change = true;
     height = 20;
     spacing = 4;
-  
+
     modules-left = [
       "hyprland/workspaces"
       "hyprland/submap"

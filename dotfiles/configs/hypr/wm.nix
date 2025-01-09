@@ -38,28 +38,30 @@ in
     layout = "dwindle";
   };
 
-  windowrulev2 = let
-    clipse = "(clipse)";
-    sober = "(org.vinegarhq.Sober)";
-    portal = "(xdg-desktop-portal-.*)";
-  in [
-    "float, class:${clipse}"
-    "size 622 652, class:${clipse}"
-    "pin, class:${clipse}, title:(Sober)"
-    # *** Sober -> Fix the external UI
-    "float, class:${sober}, title:negative:(Sober)"
-    "size 900 688, class:${sober}, title:negative:(Sober)"
-    "move onscreen, class:${sober}, title:negative:(Sober)"
-    "center, class:${sober}, title:negative:(Sober)"
-    "noborder 1, class:${sober}, title:negative:(Sober)"
-    # ***
-    "fullscreen, class:${sober}" # Might resolve the shiftlock issue
-    # *** Make selection more appropriate
-    "float, class:${portal}"
-    "size 725 443, class:${portal}"
-    "move onscreen, class:${portal}"
-    "center, class:${portal}"
-  ];
+  windowrulev2 =
+    let
+      clipse = "(clipse)";
+      sober = "(org.vinegarhq.Sober)";
+      portal = "(xdg-desktop-portal-.*)";
+    in
+    [
+      "float, class:${clipse}"
+      "size 622 652, class:${clipse}"
+      "pin, class:${clipse}, title:(Sober)"
+      # *** Sober -> Fix the external UI
+      "float, class:${sober}, title:negative:(Sober)"
+      "size 900 688, class:${sober}, title:negative:(Sober)"
+      "move onscreen, class:${sober}, title:negative:(Sober)"
+      "center, class:${sober}, title:negative:(Sober)"
+      "noborder 1, class:${sober}, title:negative:(Sober)"
+      # ***
+      "fullscreen, class:${sober}" # Might resolve the shiftlock issue
+      # *** Make selection more appropriate
+      "float, class:${portal}"
+      "size 725 443, class:${portal}"
+      "move onscreen, class:${portal}"
+      "center, class:${portal}"
+    ];
 
   bind =
     let
