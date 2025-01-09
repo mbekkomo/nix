@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+[[ -n "${WAYLAND_DISPLAY}" ]] || {
+  >&2 echo "No WAYLAND_DISPLAY found"
+  exit 1
+}
+
+otp=false
+
+while getopts "o" x; do
+  case $x in
+    o) otp=true;;
+    *) exit 1;; # opts are handled by getopts
+  esac
+done
+
+if "$otp"; then
+  pass=(pass otp)
+  regex="^otp:.+"
+  prompt="OTP"
+else
+  pass=(pass show)
+  regex="^[^o][^t][^p][^:].+"
+  prompt="Password"
+fi
+
+store=$(
+  fd --regex "$regex" ~/.local/share/password-store -e gpg --format '{.}' |
+    sd ~/.local/share/password-store/ '' | {
+      "$otp" && sd otp: ''
+      ! "$otp" && cat
+    } | wofi -d -p "$prompt" -l top -H 15% -y 5
+)
+
+[[ -n "$store" ]] || exit 1
+
+if "$otp"; then
+  : "$(basename "$store")"
+  : "$(dirname "$store")/otp:$_"
+  store="$_"
+fi
+
+set -e
+command "${pass[@]}" "$store" | head -n1 | sd '\n' '' | exec wl-copy

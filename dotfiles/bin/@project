@@ -1,0 +1,38 @@
+#!/usr/bin/env fish
+
+set default_session_name (basename -z $PWD | sd "[^a-zA-Z0-9_]" "-")
+
+set sessions
+zellij list-sessions -n | while read -l line
+    echo $line | read -d ' ' session _unused
+    set -a sessions $session
+end
+
+set session (begin
+    printf '%s\n' $sessions
+    echo "-New session-"
+end | gum choose --height 5 --header "Sessions")
+
+if test $session = "-New session-"
+    set session (gum input --header "Session name" --placeholder $default_session_name)
+    if contains sessions $session
+        zellij attach $session
+        exit $status
+    end
+
+    set session_name "project:"(if test -z "$session"
+        echo $default_session_name
+    else
+        echo $session
+    end)
+    zellij attach -b $session_name
+    zellij edit .
+    zellij action move-pane left
+    zellij action focus-next-pane
+    test -f $PWD/flake.nix && zellij action write-chars "nixd --impure"\n
+    zellij attach
+    exit $status
+else
+    zellij attach $session
+    exit $status
+end
