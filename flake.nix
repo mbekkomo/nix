@@ -59,7 +59,7 @@
         overlays = [
           nur.overlay
           (_: _: {
-            nix-search = nix-search-cli.outputs.packages.${system};
+            nix-search = nix-search-cli.outputs.packages.${system}.nix-search;
             nixGLPackages = nixGL.outputs.packages.${system};
           })
         ];
