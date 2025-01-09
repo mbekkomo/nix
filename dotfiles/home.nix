@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  etcpkgs,
   std,
   lib,
   ...
@@ -49,7 +48,7 @@ in
       noto-fonts-color-emoji
 
       # Nix-purpose
-      etcpkgs.nix-search
+      nix-search
       cachix
 
       # Devtools
@@ -149,7 +148,7 @@ in
   };
 
   nixGL = {
-    packages = etcpkgs.nixGLPackages;
+    packages = pkgs.nixGLPackages;
     defaultWrapper = "mesa";
     installScripts = [ "mesa" ];
   };
