@@ -8,7 +8,7 @@ export -f nix
 task.switch-hm() {
   local locked_hm
   locked_hm="$(nix eval --impure --raw --expr '(builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.home-manager.locked.rev')"
-  nix run github:nix-community/home-manager/"$locked_hm" -- switch --flake .
+  nix run github:nix-community/home-manager/"$locked_hm" -- switch --flake .#komo --impure
 }
 
 task.switch-nixos() {
