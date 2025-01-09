@@ -66,7 +66,7 @@
       };
     in
     {
-      homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.komo = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           declarative-cachix.homeManagerModules.declarative-cachix
