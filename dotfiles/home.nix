@@ -200,6 +200,7 @@ in
       nil
       bash-language-server
       emmet-language-server
+      yaml-language-server
       zls
     ];
     settings = loadConfig "helix/config" { };
