@@ -57,7 +57,7 @@
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
-          nur.overlay
+          nur.overlays.default
           (_: _: {
             nix-search = nix-search-cli.outputs.packages.${system}.nix-search;
             nixGLPackages = nixGL.outputs.packages.${system};
