@@ -78,8 +78,8 @@ in
 
       "CTRL + SUPER, P, exec, ${passmenu}"
       "CTRL + SUPER, R, exec, ${passmenu} -o"
-      "SHIFT + SUPER, C, killactive"
-      "SHIFT + SUPER, M, exit"
+      "SHIFT + SUPER, C, killactive,"
+      "SHIFT + SUPER, M, exit,"
     ];
 
   bindel = [
