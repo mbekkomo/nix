@@ -117,6 +117,7 @@ in
     "SUDO_PROMPT" = "[sudo 🐺] %p: ";
     "PAGER" = "moar";
     "GIT_PAGER" = PAGER;
+    "HYPRSHOT_DIR" = /${homeDir}/Pictures/screenshot;
   };
 
   catppuccin.flavor = "mocha";
