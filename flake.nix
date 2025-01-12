@@ -27,10 +27,6 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     nix-std.url = "github:chessai/nix-std";
-    refind-module = {
-      url = "git+https://gist.github.com/mbekkomo/ba3d86f021aec0f73ceec4047365ef5b";
-      flake = false;
-    };
   };
 
   outputs =
@@ -81,7 +77,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          (refind-module.outPath + /refind.nix)
+          ./modules/refind/refind.nix
           ./HP-240-G5-Notebook-PC/configuration.nix
         ];
       };
@@ -90,7 +86,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          (refind-module.sourceInfo.dir + /refind.nix)
+          ./modules/refind/refind.nix
           ./Aspire-TC-605/configuration.nix
         ];
       };
