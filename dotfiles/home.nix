@@ -129,7 +129,6 @@ in
   };
 
   nix = {
-    package = pkgs.nix;
     settings = {
       experimental-features = [
         "nix-command"
@@ -137,7 +136,6 @@ in
       ];
       allowed-users = [ username ];
     };
-    gc.automatic = true;
   };
 
   nixpkgs.config = {
