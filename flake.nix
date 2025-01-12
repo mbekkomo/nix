@@ -27,6 +27,10 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     nix-std.url = "github:chessai/nix-std";
+    nix-ld = {
+      url = "github:nix-community/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
