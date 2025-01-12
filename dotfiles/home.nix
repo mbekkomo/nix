@@ -136,6 +136,7 @@ in
       ];
       allowed-users = [ username ];
     };
+    gc.automatic = true;
   };
 
   nixpkgs.config = {
