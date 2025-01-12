@@ -81,7 +81,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          ((toString refind-module.sourceInfo.dir) + /refind.nix)
+          (refind-module.outPath + /refind.nix)
           ./HP-240-G5-Notebook-PC/configuration.nix
         ];
       };
@@ -90,7 +90,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          ((toString refind-module) + /refind.nix)
+          (refind-module.sourceInfo.dir + /refind.nix)
           ./Aspire-TC-605/configuration.nix
         ];
       };
