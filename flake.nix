@@ -31,6 +31,10 @@
       url = "github:nix-community/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helix = {
+      url = "gtihub:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -55,6 +59,7 @@
       nur,
       nix-flatpak,
       nix-ld,
+      helix,
       ...
     }:
     let
