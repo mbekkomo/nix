@@ -446,22 +446,6 @@
         "type": "github"
       }
     },
-    "refind-module": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1731129912,
-        "narHash": "sha256-dOWbAqIiDSI3AkZhHbeTBYj5hvRnVY+X+bofoMuoWF4=",
-        "ref": "refs/heads/main",
-        "rev": "8f539dc72d1a1d56adb8d434b4ba85bd3e63cf6d",
-        "revCount": 2,
-        "type": "git",
-        "url": "https://gist.github.com/mbekkomo/ba3d86f021aec0f73ceec4047365ef5b"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://gist.github.com/mbekkomo/ba3d86f021aec0f73ceec4047365ef5b"
-      }
-    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
@@ -473,8 +457,7 @@
         "nix-std": "nix-std",
         "nixGL": "nixGL",
         "nixpkgs": "nixpkgs_2",
-        "nur": "nur",
-        "refind-module": "refind-module"
+        "nur": "nur"
       }
     },
     "systems": {
