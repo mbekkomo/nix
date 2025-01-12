@@ -194,7 +194,7 @@ in
 
   programs.helix = {
     enable = true;
-    package = pkgs.helix;
+    package = pkgs.helixUnstable;
     defaultEditor = true;
     extraPackages = with pkgs; [
       lua-language-server
