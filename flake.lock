@@ -294,6 +294,26 @@
         "type": "github"
       }
     },
+    "nix-ld": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1736154240,
+        "narHash": "sha256-I8Ot6/CInJFphhK9L3T1558q4OOOXwl3f2d0SuKjYcE=",
+        "owner": "nix-community",
+        "repo": "nix-ld",
+        "rev": "8741cadfa29d9c7beeeb9b1308ef58c62c54e129",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-ld",
+        "type": "github"
+      }
+    },
     "nix-search-cli": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -453,6 +473,7 @@
         "home-manager": "home-manager_2",
         "nix-flatpak": "nix-flatpak",
         "nix-index-database": "nix-index-database",
+        "nix-ld": "nix-ld",
         "nix-search-cli": "nix-search-cli",
         "nix-std": "nix-std",
         "nixGL": "nixGL",
