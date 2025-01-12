@@ -81,6 +81,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
+          nix-ld.nixosModules.nix-ld
           ./modules/refind/refind.nix
           ./HP-240-G5-Notebook-PC/configuration.nix
         ];
@@ -90,6 +91,7 @@
         inherit system;
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
+          nix-ld.nixosModules.nix-ld
           ./modules/refind/refind.nix
           ./Aspire-TC-605/configuration.nix
         ];
