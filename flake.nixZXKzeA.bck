@@ -40,6 +40,7 @@
       catppuccin,
       nix-std,
       nur,
+      refind-module,
       nix-flatpak,
       ...
     }:
