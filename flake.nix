@@ -75,7 +75,7 @@
           (_: _: {
             nix-search = nix-search-cli.outputs.packages.${system}.nix-search;
             nixGLPackages = nixGL.outputs.packages.${system};
-            helix-unstable = helix.outputs.packages.${system}.helix;
+            helixUnstable = helix.outputs.packages.${system}.helix;
           })
         ];
       };
