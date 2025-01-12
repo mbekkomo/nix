@@ -45,6 +45,7 @@
       nix-std,
       nur,
       nix-flatpak,
+      nix-ld,
       ...
     }:
     let
