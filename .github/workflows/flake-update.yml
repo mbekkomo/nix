@@ -26,6 +26,6 @@ jobs:
             echo "MOD=0" >> $GITHUB_OUTPUT
           fi
       - uses: actions4git/add-commit-push@v1
-        if: ${{ steps.update.outpus.MOD == "1" }}
+        if: ${{ steps.update.outpus.MOD == '1' }}
         with:
           commit-message: "Update flake lockfile"
