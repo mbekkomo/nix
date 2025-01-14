@@ -242,8 +242,7 @@ in
       set fish_cursor_replace underscore
       set fish_cursor_visual block
 
-      fish_default_key_bindings -M insert
-      fish_vi_key_bindings --no-erase insert
+      fish_vi_key_bindings
     '';
     plugins =
       let
