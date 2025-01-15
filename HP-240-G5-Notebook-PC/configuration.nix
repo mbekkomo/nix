@@ -70,6 +70,8 @@ in
     openutau
   ];
 
+  programs.nix-ld.enable = true;
+
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "none";
   networking.nameservers = [
