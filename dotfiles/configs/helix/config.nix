@@ -1,4 +1,4 @@
-{ lib }: {
+{ lib, ... }: {
   theme = "catppuccin-mocha_ts";
 
   editor = {
