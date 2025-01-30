@@ -205,6 +205,11 @@ in
     ];
     settings = loadConfig "helix/config" { };
     languages = loadConfig "helix/languages" { };
+    themes.catppuccin-mocha_ts = {
+      inherits = "catppuccin-mocha";
+      "ui.background" = {};
+      "ui.text" = {};
+    };
   };
 
   programs.alacritty = {
