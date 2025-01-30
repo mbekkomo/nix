@@ -1,5 +1,5 @@
 { lib, ... }: {
-  theme = "catppuccin-mocha_ts";
+  theme = lib.mkForce "catppuccin-mocha_ts";
 
   editor = {
     true-color = true;
