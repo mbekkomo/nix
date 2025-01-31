@@ -64,7 +64,14 @@ in
     gptfdisk
     efibootmgr
     udisks
+
+    # winapps
+    podman-compose
   ];
+
+  # winapps
+  virtualisation.podman.enable = true;
+  virtualisation.podman.networkSocket.enable = true;
 
   # Enable nix-ld
   programs.nix-ld.dev.enable = true;
